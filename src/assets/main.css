@@ -13,34 +13,40 @@
     --color-primary-hover: #93c5fd;
     --color-primary-light: #1e3a5f;
     --color-primary-ring: #3b82f6;
+    --color-primary-text: #ffffff;
 }
 [data-accent='green'] {
     --color-primary: #34d399;
     --color-primary-hover: #6ee7b7;
     --color-primary-light: #064e3b;
     --color-primary-ring: #10b981;
+    --color-primary-text: #ffffff;
 }
 [data-accent='pink'] {
     --color-primary: #f472b6;
     --color-primary-hover: #f9a8d4;
     --color-primary-light: #831843;
     --color-primary-ring: #ec4899;
+    --color-primary-text: #ffffff;
 }
 [data-accent='purple'] {
     --color-primary: #c084fc;
     --color-primary-hover: #d8b4fe;
     --color-primary-light: #581c87;
     --color-primary-ring: #a855f7;
+    --color-primary-text: #ffffff;
 }
 [data-accent='orange'] {
     --color-primary: #fb923c;
     --color-primary-hover: #fdba74;
     --color-primary-light: #7c2d12;
     --color-primary-ring: #f97316;
+    --color-primary-text: #ffffff;
 }
 [data-accent='white'] {
     --color-primary: #ffffff;
     --color-primary-hover: #e5e7eb;
     --color-primary-light: #374151;
     --color-primary-ring: #d1d5db;
+    --color-primary-text: #000000;
 }

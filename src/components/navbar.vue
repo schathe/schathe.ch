@@ -64,12 +64,12 @@ const languages = [
                                         class="rounded-md px-3 py-1.5 text-sm font-medium transition-colors"
                                         :class="
                                             settings.locale === lang.value
-                                                ? 'text-white'
+                                                ? ''
                                                 : 'text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'
                                         "
                                         :style="
                                             settings.locale === lang.value
-                                                ? { backgroundColor: 'var(--color-primary)' }
+                                                ? { backgroundColor: 'var(--color-primary)', color: 'var(--color-primary-text)' }
                                                 : {}
                                         "
                                         @click="settings.locale = lang.value"

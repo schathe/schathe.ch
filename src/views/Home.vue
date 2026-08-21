@@ -43,8 +43,8 @@ const experiences = experiencesRaw.map((item) => ({
             <div class="flex gap-4">
                 <router-link
                     to="/projects"
-                    class="inline-block rounded-lg px-6 py-3 text-sm font-medium text-white transition-colors"
-                    style="background-color: var(--color-primary)"
+                    class="inline-block rounded-lg px-6 py-3 text-sm font-medium transition-colors"
+                    style="background-color: var(--color-primary); color: var(--color-primary-text)"
                     @mouseenter="
                         ($event.target as HTMLElement).style.backgroundColor =
                             'var(--color-primary-hover)'
