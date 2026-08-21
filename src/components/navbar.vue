@@ -29,7 +29,7 @@ const languages = [
         <div class="ml-auto">
             <Menu as="div" class="relative">
                 <MenuButton
-                    class="flex items-center gap-1 text-sm text-gray-500 transition-colors hover:text-[var(--color-primary)]"
+                    class="flex items-center gap-1 text-sm text-gray-300 transition-colors hover:text-[var(--color-primary)]"
                 >
                     <Cog6ToothIcon class="size-6" />
                 </MenuButton>
@@ -38,7 +38,7 @@ const languages = [
                 >
                     <div class="space-y-4">
                         <div>
-                            <p class="mb-2 text-xs font-medium uppercase tracking-wider text-gray-400">
+                            <p class="mb-2 text-xs font-medium uppercase tracking-wider text-gray-200">
                                 {{ t('settings.accent') }}
                             </p>
                             <div class="flex gap-2">
@@ -55,7 +55,7 @@ const languages = [
                         </div>
 
                         <div class="border-t border-gray-200 dark:border-gray-600">
-                            <p class="mb-2 pt-4 text-xs font-medium uppercase tracking-wider text-gray-400">
+                            <p class="mb-2 pt-4 text-xs font-medium uppercase tracking-wider text-gray-200">
                                 {{ t('settings.language') }}
                             </p>
                             <div class="flex gap-2">
@@ -65,7 +65,7 @@ const languages = [
                                         :class="
                                             settings.locale === lang.value
                                                 ? ''
-                                                : 'text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'
+                                                : 'text-gray-400 hover:bg-gray-100 dark:text-gray-100 dark:hover:bg-gray-700'
                                         "
                                         :style="
                                             settings.locale === lang.value

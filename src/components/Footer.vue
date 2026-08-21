@@ -23,9 +23,9 @@ const links = [
 </script>
 
 <template>
-    <footer class="mt-24 border-t border-gray-800 px-6 py-8">
-        <div class="mx-auto flex max-w-4xl flex-col items-center justify-between gap-4 sm:flex-row">
-            <p class="text-sm text-gray-500">
+    <footer class="border-t border-gray-800 px-8 py-10">
+        <div class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 sm:flex-row">
+            <p class="text-sm text-gray-300">
                 &copy; {{ new Date().getFullYear() }} Schathe. {{ t('footer.rights') }}
             </p>
             <div class="flex gap-4">
@@ -35,7 +35,7 @@ const links = [
                     :href="link.href"
                     :target="link.icon !== 'email' ? '_blank' : undefined"
                     :rel="link.icon !== 'email' ? 'noopener noreferrer' : undefined"
-                    class="text-gray-500 transition-colors hover:text-[var(--color-primary)]"
+                    class="text-gray-300 transition-colors hover:text-[var(--color-primary)]"
                     :title="link.label"
                 >
                     <!-- GitHub -->

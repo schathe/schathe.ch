@@ -33,13 +33,13 @@ const experiences = experiencesRaw.map((item) => ({
 </script>
 
 <template>
-    <div class="mx-auto max-w-4xl px-6 py-20">
+    <div class="mx-auto max-w-5xl px-8 py-12 sm:py-24">
         <!-- Hero -->
         <section class="space-y-6">
             <h1 class="text-5xl font-bold" style="color: var(--color-primary)">
                 {{ t('home.title') }}
             </h1>
-            <p class="text-lg text-gray-400">{{ t('home.subtitle') }}</p>
+            <p class="text-lg text-gray-200">{{ t('home.subtitle') }}</p>
             <div class="flex gap-4">
                 <router-link
                     to="/projects"
@@ -66,8 +66,20 @@ const experiences = experiencesRaw.map((item) => ({
             </div>
         </section>
 
+        <!-- About -->
+        <section class="mt-32 space-y-6">
+            <h2 class="text-2xl font-bold" style="color: var(--color-primary)">
+                {{ t('about.title') }}
+            </h2>
+            <div class="space-y-4 text-gray-200">
+                <p>{{ t('about.p1') }}</p>
+                <p>{{ t('about.p2') }}</p>
+                <p>{{ t('about.p3') }}</p>
+            </div>
+        </section>
+
         <!-- Education -->
-        <section class="mt-24 space-y-8">
+        <section class="mt-32 space-y-8">
             <h2 class="text-2xl font-bold" style="color: var(--color-primary)">
                 {{ t('parcours.title') }}
             </h2>
@@ -75,7 +87,7 @@ const experiences = experiencesRaw.map((item) => ({
         </section>
 
         <!-- Experiences -->
-        <section class="mt-24 space-y-8">
+        <section class="mt-32 space-y-8">
             <h2 class="text-2xl font-bold" style="color: var(--color-primary)">
                 {{ t('experiences.title') }}
             </h2>

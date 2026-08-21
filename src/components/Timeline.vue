@@ -32,8 +32,8 @@ defineProps<{
                         {{ item.label }}
                     </p>
                     <h3 class="text-lg font-semibold text-white">{{ item.title }}</h3>
-                    <p class="mb-1 text-xs text-gray-500">{{ item.period }}</p>
-                    <p class="text-sm text-gray-400">{{ item.description }}</p>
+                    <p class="mb-1 text-xs text-gray-300">{{ item.period }}</p>
+                    <p class="text-sm text-gray-200">{{ item.description }}</p>
                 </div>
 
                 <!-- Dot on the line -->
