@@ -31,7 +31,7 @@ const languages = [
                 <MenuButton
                     class="flex items-center gap-1 text-sm text-gray-500 transition-colors hover:text-[var(--color-primary)]"
                 >
-                    <Cog6ToothIcon class="size-4" />
+                    <Cog6ToothIcon class="size-6" />
                 </MenuButton>
                 <MenuItems
                     class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-lg border border-gray-200 bg-white p-4 shadow-lg focus:outline-hidden dark:border-gray-700 dark:bg-gray-800"

@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { ref, watch } from 'vue'
 import i18n from '@/i18n'
 
-export type Accent = 'blue' | 'green' | 'pink' | 'purple' | 'orange'
+export type Accent = 'blue' | 'green' | 'pink' | 'purple' | 'orange' | 'white'
 export type Locale = 'fr' | 'en'
 
 export const ACCENTS: { value: Accent; label: string; color: string }[] = [
@@ -11,10 +11,11 @@ export const ACCENTS: { value: Accent; label: string; color: string }[] = [
     { value: 'pink', label: 'Rose', color: '#db2777' },
     { value: 'purple', label: 'Violet', color: '#9333ea' },
     { value: 'orange', label: 'Orange', color: '#ea580c' },
+    { value: 'white', label: 'Blanc', color: '#ffffff' },
 ]
 
 export const useSettingsStore = defineStore('settings', () => {
-    const accent = ref<Accent>((localStorage.getItem('accent') as Accent) || 'blue')
+    const accent = ref<Accent>((localStorage.getItem('accent') as Accent) || 'pink')
     const locale = ref<Locale>((localStorage.getItem('locale') as Locale) || 'fr')
 
     function applyAccent(value: Accent) {
