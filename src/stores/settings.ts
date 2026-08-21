@@ -1,25 +1,45 @@
 import { defineStore } from 'pinia'
 import { ref, watch } from 'vue'
+import i18n from '@/i18n'
+
+export type Accent = 'blue' | 'green' | 'pink' | 'purple' | 'orange'
+export type Locale = 'fr' | 'en'
+
+export const ACCENTS: { value: Accent; label: string; color: string }[] = [
+    { value: 'blue', label: 'Bleu', color: '#2563eb' },
+    { value: 'green', label: 'Vert', color: '#059669' },
+    { value: 'pink', label: 'Rose', color: '#db2777' },
+    { value: 'purple', label: 'Violet', color: '#9333ea' },
+    { value: 'orange', label: 'Orange', color: '#ea580c' },
+]
 
 export const useSettingsStore = defineStore('settings', () => {
-    const theme = ref(localStorage.getItem('theme') || 'system')
-    const locale = ref(localStorage.getItem('locale') || navigator.language.slice(0, 2))
+    const accent = ref<Accent>((localStorage.getItem('accent') as Accent) || 'blue')
+    const locale = ref<Locale>((localStorage.getItem('locale') as Locale) || 'fr')
 
-    function applyTheme(value: string) {
-        const isDark =
-            value === 'dark' ||
-            (value === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
-        document.documentElement.classList.toggle('dark', isDark)
+    function applyAccent(value: Accent) {
+        document.documentElement.setAttribute('data-accent', value)
     }
 
-    // watch(theme, (value) => {
-    //     localStorage.setItem('theme', value)
-    //     applyTheme(value)
-    // }, { immediate: true })
+    function applyLocale(value: Locale) {
+        i18n.global.locale.value = value
+        document.documentElement.setAttribute('lang', value)
+    }
+
+    watch(accent, (value) => {
+        localStorage.setItem('accent', value)
+        applyAccent(value)
+    })
 
     watch(locale, (value) => {
         localStorage.setItem('locale', value)
+        applyLocale(value)
     })
 
-    return { theme, locale }
+    function init() {
+        applyAccent(accent.value)
+        applyLocale(locale.value)
+    }
+
+    return { accent, locale, init, ACCENTS }
 })

@@ -1,9 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>
 
 <template>
-    <h1 class="text-3xl font-bold text-blue-600">You did it!</h1>
-    <p>
-        Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-        documentation
-    </p>
+    <div class="p-8">
+        <h1 class="text-3xl font-bold" style="color: var(--color-primary)">
+            {{ t('home.title') }}
+        </h1>
+    </div>
 </template>
