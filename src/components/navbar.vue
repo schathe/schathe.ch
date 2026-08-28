@@ -44,7 +44,7 @@ const languages = [
                             <div class="flex gap-2">
                                 <MenuItem v-for="a in ACCENTS" :key="a.value">
                                     <button
-                                        class="h-7 w-7 rounded-full transition-transform hover:scale-110"
+                                        class="h-6 w-6 rounded-full transition-transform hover:scale-110"
                                         :class="settings.accent === a.value ? 'ring-2 ring-offset-2 ring-[var(--color-primary-ring)]' : ''"
                                         :style="{ backgroundColor: a.color }"
                                         :title="a.label"
