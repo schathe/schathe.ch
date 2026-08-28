@@ -10,7 +10,7 @@ export default {
     },
     home: {
         title: 'Schathe',
-        subtitle: "Informaticien d'entreprise basé en Suisse.",
+        subtitle: 'Ingénieur logiciel basé en Suisse.',
         cta: 'Voir mes projets',
         ctaSecondary: 'Me contacter',
     },
